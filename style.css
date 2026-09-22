@@ -124,7 +124,7 @@
     display: inline-block; width: 100%; box-sizing: border-box; break-inside: avoid;
     background: #fff; margin: 0 0 28px; padding: 40px 38px; text-align: left;
   }
-  .poem-card .ptitle { font-style: italic; font-size: 17px; color: var(--ink); margin-bottom: 28px; }
+  .poem-card .ptitle { font-style: normal; font-size: 17px; color: var(--ink); margin-bottom: 28px; }
   .poem-card .pbody { font-size: 17px; line-height: 1.85; }
   .poem-card .pbody + .pbody { margin-top: 1.6em; }
   .poem-card .pcaption { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
