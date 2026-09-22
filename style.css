@@ -57,6 +57,8 @@
   section { padding: 96px 0; text-align: center; }
   #livre { padding-top: 56px; }
   h2 { font-weight: 400; font-style: italic; font-size: 1.9rem; margin-bottom: 24px; line-height: 1.25; }
+  .title-link { color: inherit; text-decoration: none; }
+  .title-link:hover, .title-link:focus-visible { color: var(--muted); outline: none; }
   h2.big { font-size: 2.4rem; }
   p + p { margin-top: 1.2em; }
   .label { font-size: 12px; letter-spacing: .35em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: block; }
@@ -82,7 +84,7 @@
   }
 
   /* Menu déroulant (trois petites barres) */
-  .menu-btn { background: none; border: 0; cursor: pointer; padding: 4px 2px; line-height: 0; color: var(--muted); transition: color .3s; }
+  .menu-btn { background: none; border: 0; cursor: pointer; padding: 0 2px; line-height: inherit; font-family: var(--serif); font-size: 15px; font-style: italic; font-weight: 500; color: var(--muted); transition: color .3s; }
   .menu-btn:hover, .menu-btn:focus-visible { color: var(--ink); outline: none; }
   .menu {
     display: none; position: absolute; top: 100%; right: max(16px, calc(50vw - 300px));
@@ -159,14 +161,14 @@
   .about-text .three { text-align: left; }
   @media (max-width: 760px) {
     .about { grid-template-columns: 34% 1fr; gap: 22px; align-items: start; }
-    .about .photo { border-radius: 8px; position: sticky; top: 80px; }
+    .about .photo { border-radius: 8px; will-change: transform; }
     .about-text { font-size: .8em; line-height: 1.6; }
     .about-text p { text-align: left; hyphens: manual; }
     .about-text .label { margin-bottom: 14px; }
   }
 
   /* Cartes (format jeu de cartes 5:7, comme un poker 63 x 88 mm) */
-  .cards { display: flex; justify-content: center; padding: 56px 0 40px; --cw: clamp(62px, 17vw, 128px); }
+  .cards { display: flex; justify-content: center; padding: 56px 0 40px; --cw: clamp(72px, 19vw, 148px); }
   .card {
     position: relative; display: flex; align-items: center; justify-content: center;
     width: var(--cw); aspect-ratio: 5 / 7; flex: none;
@@ -175,7 +177,7 @@
     border: 1px solid #d4d4d4;
     border-radius: calc(var(--cw) * 0.07);
     box-shadow: 0 10px 26px rgba(0,0,0,.24), 0 2px 5px rgba(0,0,0,.14);
-    text-decoration: none; font-style: italic; font-size: calc(var(--cw) * 0.175);
+    text-decoration: none; font-style: italic; font-size: calc(var(--cw) * 0.205);
     transform: rotate(var(--r, 0deg)) translateY(var(--y, 0));
     transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
   }
