@@ -62,6 +62,7 @@
   h2.big { font-size: 2.4rem; }
   p + p { margin-top: 1.2em; }
   .label { font-size: 12px; letter-spacing: .35em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: block; }
+  .subhead { font-size: 20px; letter-spacing: 0; text-transform: none; color: var(--muted); margin-bottom: 20px; display: block; }
   .small { font-size: .85em; color: var(--muted); }
   .lead { font-style: italic; color: var(--muted); margin-bottom: 24px; }
 
@@ -114,16 +115,20 @@
   /* Poemes : groupes + encarts blancs, un poeme par encart */
   .poems-group { margin-top: 64px; }
   .poems-group .label { text-align: center; }
-  .poem-cards { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 32px; }
+  /* Disposition en quinconce (façon mur d'images) : les poemes remplissent l'espace selon leur hauteur */
+  .poem-cards {
+    columns: 2 240px; column-gap: 28px;
+    width: min(880px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%);
+  }
   .poem-card {
-    background: #fff; width: fit-content; max-width: calc(100% - 48px); margin: 0;
-    padding: 48px 52px; text-align: left;
+    display: inline-block; width: 100%; box-sizing: border-box; break-inside: avoid;
+    background: #fff; margin: 0 0 28px; padding: 40px 38px; text-align: left;
   }
   .poem-card .ptitle { font-style: normal; font-size: 17px; color: var(--ink); margin-bottom: 28px; }
   .poem-card .pbody { font-size: 17px; line-height: 1.85; }
   .poem-card .pbody + .pbody { margin-top: 1.6em; }
-  .def { max-width: 560px; margin: 56px auto 0; padding-top: 40px; border-top: 1px solid var(--line); text-align: left; }
-  .def h2 { font-size: 30px; margin-bottom: 6px; font-style: normal; }
+  .def { max-width: 560px; margin: 56px auto 0; padding-top: 40px; text-align: left; }
+  .def h2 { font-size: 20px; margin-bottom: 6px; font-style: normal; }
   .def .by { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
   .def .ipa { font-style: italic; color: var(--muted); margin-bottom: 4px; }
 
