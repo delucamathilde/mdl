@@ -107,8 +107,8 @@
   .elist li { border-top: 1px solid var(--line); }
   .elist li:last-child { border-bottom: 1px solid var(--line); }
   .elist a { display: block; padding: 24px 0; text-decoration: none; }
-  .elist .t { display: block; font-style: normal; font-size: 1.45rem; line-height: 1.35; }
-  .elist .d { display: block; margin-top: 8px; font-size: .85rem; line-height: 1.55; color: var(--muted); }
+  .elist .t { display: block; font-style: normal; font-size: 20px; line-height: 1.35; }
+  .elist .d { display: block; margin-top: 8px; font-size: 17px; line-height: 1.55; color: var(--muted); }
   .elist a:hover .t, .elist a:focus-visible .t { text-decoration: underline; text-underline-offset: 5px; outline: none; }
 
   /* Poemes : groupes + encarts blancs, un poeme par encart */
