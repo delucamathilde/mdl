@@ -84,7 +84,7 @@
   }
 
   /* Menu déroulant (trois petites barres) */
-  .menu-btn { background: none; border: 0; cursor: pointer; padding: 0; margin: 0; font: inherit; color: var(--muted); transition: color .3s; vertical-align: baseline; }
+  .menu-btn { background: none; border: 0; cursor: pointer; padding: 0; margin: 0; font: inherit; font-size: 1.5em; color: var(--muted); transition: color .3s; vertical-align: -0.1em; line-height: 1; }
   .menu-btn:hover, .menu-btn:focus-visible { color: var(--ink); outline: none; }
   .menu {
     display: none; position: absolute; top: 100%; right: max(16px, calc(50vw - 300px));
@@ -114,11 +114,15 @@
   .def h2 { font-size: 2.6rem; margin-bottom: 6px; }
   .def .by { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
   .def .ipa { font-style: italic; color: var(--muted); margin-bottom: 4px; }
-  .def-photo {
-    display: block; width: 100%; max-width: 340px; margin: 28px 0;
-    border-radius: 16px; box-shadow: 0 18px 40px rgba(0,0,0,.18);
-  }
-  .def .couplet { font-style: italic; margin-top: 28px; }
+
+  /* Bloc visuel unifie : bande d'illustration (spirales) + texte, en un seul ensemble noir */
+  .def-visual { margin: 28px 0; box-shadow: 0 18px 40px rgba(0,0,0,.18); border-radius: 16px; overflow: hidden; }
+  .def-photo { display: block; width: 100%; }
+  .def-text-block { background: #0a0a0a; color: #f2ece4; padding: 32px 28px; }
+  .def-text-block p { color: #f2ece4; }
+  .def-text-block em { font-style: italic; }
+  .def-text-block p + p { margin-top: 1.2em; }
+  .def-text-block .couplet { font-style: italic; margin-top: 28px; color: #cfc6ba; }
   @media (max-width: 520px) { .elist a { grid-template-columns: 1fr; gap: 4px; } .menu { right: 10px; } }
 
   /* Boutons */
@@ -211,6 +215,22 @@
   .rows .k { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; padding-top: 6px; }
   .rows p { font-size: .9em; color: var(--muted); line-height: 1.55; }
   .rows a.textlink { display: inline-block; margin-top: 8px; }
+
+  /* Variante carte, a l'essai pour Offerings : ul.rows.offer-cards */
+  .rows.offer-cards {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 720px;
+  }
+  .rows.offer-cards li {
+    display: block; border: 1px solid var(--line); border-radius: 16px;
+    padding: 30px 28px; background: color-mix(in srgb, var(--ink) 2%, transparent);
+  }
+  .rows.offer-cards .k {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: 1.3rem; text-transform: none; letter-spacing: 0;
+    color: var(--ink); padding-top: 0; margin-bottom: 12px; display: block;
+  }
+  .rows.offer-cards p { font-size: .92em; }
+  @media (max-width: 640px) { .rows.offer-cards { grid-template-columns: 1fr; } }
 
   .three { list-style: none; margin-top: 32px; }
   .three li { font-style: italic; }
