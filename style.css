@@ -266,10 +266,10 @@
   footer a:hover { color: var(--ink); }
   footer p + p { margin-top: 12px; }
 
-  .social-links { display: flex; justify-content: center; align-items: center; gap: 26px; margin-bottom: 28px; }
+  .social-links { display: flex; justify-content: center; align-items: center; gap: 28px; margin-bottom: 28px; }
   .social-links a { display: block; border-bottom: none; color: var(--ink); opacity: .55; transition: opacity .2s; }
   .social-links a:hover, .social-links a:focus-visible { opacity: 1; }
-  .social-links svg { width: 19px; height: 19px; display: block; }
+  .social-links svg { width: 23px; height: 23px; display: block; }
 
   /* Apparition douce */
   .fade { opacity: 0; transform: translateY(14px); transition: opacity 1.4s ease, transform 1.4s ease; }
