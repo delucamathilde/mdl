@@ -94,6 +94,8 @@
   .menu a:hover, .menu a:focus-visible { background: rgba(0,0,0,.04); color: var(--ink); }
 
   .isbn { margin-top: 30px; font-size: 11px; letter-spacing: .14em; color: #e4d9ce; }
+  .isbn-link { color: inherit; text-decoration: none; }
+  .isbn-link:hover, .isbn-link:focus-visible { color: var(--muted); outline: none; }
 
   /* Pages intérieures */
   .sub { padding: 150px 0 24px; text-align: center; }
