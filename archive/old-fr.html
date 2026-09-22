@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathilde De Luca — Autrice</title>
+<meta name="description" content="Mathilde De Luca écrit sur l'intériorité, le temps et ce qui reste quand le bruit se tait. Livre, newsletter, podcast, lectures et ateliers.">
+<meta property="og:title" content="Mathilde De Luca — Autrice">
+<meta property="og:description" content="Écrire pour habiter le silence.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #000000;
+    --muted: #666666;
+    --line: #d9d9d9;
+    --accent: #000000;
+    --serif: "EB Garamond", Georgia, serif;
+    --sans: "EB Garamond", Georgia, serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 21px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+  /* Menu */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 28px;
+    padding: 18px 16px;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(6px);
+    font-family: var(--sans); font-weight: 300; font-size: 11px;
+    letter-spacing: .28em; text-transform: uppercase;
+  }
+  nav a { text-decoration: none; color: var(--muted); transition: color .3s; }
+  nav a:hover, nav a:focus-visible { color: var(--accent); outline: none; }
+
+  /* Hero */
+  header.hero {
+    min-height: 100svh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 96px 24px 48px; position: relative;
+  }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 300; font-size: 12px;
+    letter-spacing: .4em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-weight: 300; font-size: clamp(2.8rem, 9vw, 5.2rem);
+    line-height: 1.05; letter-spacing: .01em;
+  }
+  h1 em { font-style: italic; }
+  .tagline {
+    margin-top: 32px; font-style: italic; font-weight: 300;
+    font-size: 1.35rem; color: var(--muted); max-width: 30ch;
+  }
+  .scroll {
+    position: absolute; bottom: 32px; width: 1px; height: 56px;
+    background: linear-gradient(var(--line), transparent);
+  }
+
+  /* Sections */
+  section { padding: 96px 0; text-align: center; }
+  .rule { width: 40px; height: 1px; background: var(--accent); margin: 0 auto 40px; opacity: .6; }
+  h2 { font-weight: 400; font-style: italic; font-size: 1.9rem; margin-bottom: 24px; }
+  p + p { margin-top: 1.2em; }
+  .label {
+    font-family: var(--sans); font-weight: 300; font-size: 11px;
+    letter-spacing: .35em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px; display: block;
+  }
+  .small { font-size: .85em; color: var(--muted); }
+
+  .poem {
+    font-style: italic; font-weight: 300; font-size: 1.5rem; line-height: 1.9;
+    padding: 24px 0 96px; text-align: center;
+  }
+
+  /* Images */
+  .photo {
+    display: block; width: 100%; max-width: 360px; height: auto;
+    margin: 0 auto 40px; border-radius: 2px;
+  }
+  .cover { max-width: 240px; box-shadow: 0 18px 40px rgba(0,0,0,.18); }
+  .placeholder {
+    display: flex; align-items: center; justify-content: center;
+    background: color-mix(in srgb, var(--line) 50%, transparent);
+    border: 1px dashed var(--line);
+    color: var(--muted); font-family: var(--sans); font-weight: 300;
+    font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+  }
+  .placeholder.portrait { aspect-ratio: 4 / 5; }
+  .placeholder.book { aspect-ratio: 2 / 3; }
+
+  /* Boutons */
+  .btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 16px; margin-top: 32px; }
+  .btn {
+    display: inline-block; padding: 14px 34px;
+    border: 1px solid var(--ink); color: var(--ink); text-decoration: none;
+    font-family: var(--sans); font-weight: 300; font-size: 13px;
+    letter-spacing: .25em; text-transform: uppercase;
+    transition: background .4s ease, color .4s ease, border-color .4s ease;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
+  .btn.solid { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+  .btn.solid:hover, .btn.solid:focus-visible { background: transparent; color: var(--accent); }
+  .textlink {
+    font-family: var(--sans); font-weight: 300; font-size: 12px;
+    letter-spacing: .2em; color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--line); padding-bottom: 2px;
+  }
+  .textlink:hover { color: var(--accent); }
+
+    /* Cartes (format jeu de cartes 5:7, comme un poker 63 x 88 mm) */
+  .cards { display: flex; justify-content: center; padding: 56px 0 40px; --cw: clamp(78px, 22vw, 150px); }
+  .card {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: var(--cw); aspect-ratio: 5 / 7; flex: none;
+    margin-left: calc(var(--cw) * -0.28);
+    background: var(--ink); color: var(--paper);
+    border-radius: calc(var(--cw) * 0.07);
+    box-shadow: 0 8px 22px rgba(128,128,128,.25);
+    text-decoration: none;
+    font-style: italic; font-size: calc(var(--cw) * 0.2); letter-spacing: .01em;
+    transform: rotate(var(--r, 0deg)) translateY(var(--y, 0));
+    transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
+  }
+  .card:first-child { margin-left: 0; }
+  .card::before {
+    content: ""; position: absolute; inset: calc(var(--cw) * 0.055);
+    border: 1px solid color-mix(in srgb, var(--paper) 40%, transparent);
+    border-radius: calc(var(--cw) * 0.035); pointer-events: none;
+  }
+  .card:nth-child(1) { --r: -10deg; --y: 12px; }
+  .card:nth-child(2) { --r: -5deg;  --y: 3px; }
+  .card:nth-child(3) { --r: 0deg;   --y: 0; }
+  .card:nth-child(4) { --r: 5deg;   --y: 3px; }
+  .card:nth-child(5) { --r: 10deg;  --y: 12px; }
+  .card:hover, .card:focus-visible {
+    z-index: 5; outline: none;
+    transform: rotate(0deg) translateY(-22px) scale(1.09);
+    box-shadow: 0 26px 44px rgba(128,128,128,.4);
+  }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+
+/* Agenda */
+  .agenda { list-style: none; margin: 40px auto 0; max-width: 480px; text-align: left; }
+  .agenda li {
+    display: grid; grid-template-columns: 96px 1fr; gap: 20px;
+    padding: 20px 0; border-top: 1px solid var(--line);
+  }
+  .agenda li:last-child { border-bottom: 1px solid var(--line); }
+  .agenda .date {
+    font-family: var(--sans); font-weight: 300; font-size: 12px;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--accent); padding-top: 6px;
+  }
+  .agenda strong { font-weight: 500; display: block; }
+  .agenda span { font-size: .85em; color: var(--muted); }
+
+  hr { border: 0; border-top: 1px solid var(--line); }
+
+  footer {
+    padding: 56px 24px 64px; text-align: center;
+    font-family: var(--sans); font-weight: 300; font-size: 12px;
+    letter-spacing: .2em; color: var(--muted);
+  }
+  footer a { text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--accent); }
+
+  /* Apparition douce */
+  .fade { opacity: 0; transform: translateY(14px); transition: opacity 1.4s ease, transform 1.4s ease; }
+  .fade.in { opacity: 1; transform: none; }
+  header .fade:nth-child(2) { transition-delay: .3s; }
+  header .fade:nth-child(3) { transition-delay: .6s; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade { opacity: 1; transform: none; transition: none; }
+  }
+  @media (max-width: 480px) {
+    body { font-size: 19px; }
+    section { padding: 72px 0; }
+    nav { gap: 4px 16px; font-size: 10px; letter-spacing: .2em; padding: 14px 12px; }
+    .agenda li { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+
+<body>
+
+<nav aria-label="Menu principal">
+  <a href="#livre">Livre</a>
+  <a href="#ecrits">Écrits</a>
+  <a href="#podcast">Podcast</a>
+  <a href="#lectures">Lectures &amp; ateliers</a>
+  <a href="#a-propos">À propos</a>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow fade">Autrice</span>
+  <h1 class="fade">Mathilde<br><em>De Luca</em></h1>
+  <p class="tagline fade">J'écris pour habiter le silence, et pour ce qui reste quand le bruit se retire.</p>
+  <div class="scroll" aria-hidden="true"></div>
+</header>
+
+<div class="wrap">
+
+  <p class="poem fade">
+    Il y a des jours<br>
+    où penser<br>
+    revient à ouvrir une fenêtre<br>
+    sur une pièce qu'on croyait connaître.
+  </p>
+
+  <hr>
+
+  <!-- LIVRE -->
+  <section id="livre">
+    <span class="label fade">Le livre</span>
+    <!-- Remplace le bloc "placeholder" par : <img class="photo cover fade" src="images/livre.jpg" alt="Couverture de [Titre du livre]"> -->
+    <div class="photo cover placeholder book fade">Couverture</div>
+    <h2 class="fade">Titre de votre livre</h2>
+    <p class="fade">Une ou deux phrases pour dire ce que ce livre ouvre, sans tout expliquer. Laissez la place à la curiosité.</p>
+    <div class="btns fade">
+      <a class="btn solid" href="https://www.amazon.fr/dp/VOTRE-ASIN" target="_blank" rel="noopener">Lire sur Amazon</a>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ÉCRITS / NEWSLETTER -->
+  <section id="ecrits">
+    <span class="label fade">Les écrits</span>
+    <h2 class="fade">La newsletter</h2>
+    <p class="fade">Des essais et des poèmes, envoyés quand quelque chose est prêt à être dit. Sans calendrier forcé.</p>
+    <div class="cards fade" role="list">
+      <a class="card" role="listitem" href="https://VOTRE-NOM.substack.com/p/essai-1" target="_blank" rel="noopener" aria-label="Lire l'essai : body">body</a>
+      <a class="card" role="listitem" href="https://VOTRE-NOM.substack.com/p/essai-2" target="_blank" rel="noopener" aria-label="Lire l'essai : label">label</a>
+      <a class="card" role="listitem" href="https://VOTRE-NOM.substack.com/p/essai-3" target="_blank" rel="noopener" aria-label="Lire l'essai : think">think</a>
+      <a class="card" role="listitem" href="https://VOTRE-NOM.substack.com/p/essai-4" target="_blank" rel="noopener" aria-label="Lire l'essai : activist">activist</a>
+      <a class="card" role="listitem" href="https://VOTRE-NOM.substack.com/p/essai-5" target="_blank" rel="noopener" aria-label="Lire l'essai : human">human</a>
+    </div>
+    <!-- Pour changer un essai : modifie le mot et le lien href de sa carte. -->
+
+    <div class="btns fade">
+      <a class="btn" href="https://VOTRE-NOM.substack.com/subscribe" target="_blank" rel="noopener">S'abonner sur Substack</a>
+    </div>
+    <p class="small fade" style="margin-top:20px"><a class="textlink" href="https://VOTRE-NOM.substack.com/archive" target="_blank" rel="noopener">Lire les derniers textes</a></p>
+  </section>
+
+  <hr>
+
+  <!-- PODCAST -->
+  <section id="podcast">
+    <span class="label fade">Le podcast</span>
+    <h2 class="fade">Nom du podcast</h2>
+    <p class="fade">Une phrase pour dire de quoi il parle, et à quel moment de la journée on l'écoute.</p>
+    <div class="btns fade">
+      <a class="btn" href="https://VOTRE-NOM.substack.com/podcast" target="_blank" rel="noopener">Écouter</a>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- LECTURES & ATELIERS -->
+  <section id="lectures">
+    <span class="label fade">Lectures &amp; ateliers</span>
+    <h2 class="fade">Se retrouver, en vrai</h2>
+    <p class="fade">Lectures à voix haute, ateliers d'écriture, moments à petite échelle. Voici les prochaines dates.</p>
+
+    <!-- Pour ajouter une date : copie un bloc <li>…</li> et change le texte. Pour en retirer une : supprime son bloc. -->
+    <ul class="agenda fade">
+      <li>
+        <div class="date">12 oct.</div>
+        <div><strong>Atelier d'écriture</strong><span>Lieu, ville · 18h30 · 25 €</span></div>
+      </li>
+      <li>
+        <div class="date">8 nov.</div>
+        <div><strong>Lecture publique</strong><span>Lieu, ville · 19h · Entrée libre</span></div>
+      </li>
+    </ul>
+
+    <div class="btns fade">
+      <a class="btn solid" href="mailto:VOTRE@EMAIL.COM?subject=R%C3%A9servation%20%E2%80%93%20atelier&body=Bonjour%20Mathilde%2C%0A%0AJe%20souhaite%20r%C3%A9server%20ma%20place%20pour%20l%27atelier%20du%20%E2%80%A6%0A%0ANom%20%3A%0ANombre%20de%20places%20%3A%0A">Réserver par email</a>
+      <a class="btn" href="https://wa.me/33600000000?text=Bonjour%20Mathilde%2C%20je%20souhaite%20r%C3%A9server%20une%20place." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="small fade" style="margin-top:28px">Paiement par virement ou PayPal, les détails sont envoyés avec la confirmation.</p>
+    <p class="small fade" style="margin-top:12px">Vous organisez un événement ? <a class="textlink" href="mailto:VOTRE@EMAIL.COM?subject=Invitation%20lecture%20%2F%20atelier">Écrivez-moi</a></p>
+  </section>
+
+  <hr>
+
+  <!-- À PROPOS -->
+  <section id="a-propos">
+    <div class="rule"></div>
+    <!-- Remplace le bloc "placeholder" par : <img class="photo fade" src="images/mathilde.jpg" alt="Portrait de Mathilde De Luca"> -->
+    <div class="photo placeholder portrait fade">Portrait</div>
+    <h2 class="fade">À propos</h2>
+    <p class="fade">Je suis autrice. J'écris des essais, des poèmes et des fragments d'autofiction, autour de l'intériorité, du temps qui passe et de la façon dont on apprend à se tenir dans sa propre vie.</p>
+    <p class="fade">Mon écriture cherche la justesse plutôt que l'effet, et laisse volontiers une part de mystère au lecteur.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© <span id="y">2026</span> Mathilde De Luca</p>
+  <p style="margin-top:12px"><a href="https://instagram.com/huniverse" target="_blank" rel="noopener">@huniverse</a></p>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
