@@ -123,7 +123,7 @@
   .def-text-block p { color: #f2ece4; }
   .def-text-block em { font-style: italic; }
   .def-text-block p + p { margin-top: 1.2em; }
-  .def-text-block .couplet.not-italic { font-style: normal; margin-top: 28px; color: #cfc6ba; }
+  .def-text-block .couplet.not-italic { font-style: normal; margin-top: 28px; color: #f2ece4; }
   @media (max-width: 520px) { .elist a { grid-template-columns: 1fr; gap: 4px; } .menu { right: 10px; } }
 
   /* Boutons */
