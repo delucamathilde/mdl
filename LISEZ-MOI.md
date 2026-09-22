@@ -1,39 +1,48 @@
-# Le dossier de ton site
+# Le site — mathildedeluca.com
 
-Ce dossier contient tout ce qu'il faut pour mettre le site en ligne :
+Ce dossier est **la source exacte de ce qui est en ligne**. Tout ce que tu changes ici et
+envoies sur GitHub apparaît sur le site en 1 à 2 minutes.
+
+## Structure
 
 ```
 site/
 ├── index.html         (accueil)
 ├── essays.html         (liste des essais)
-├── poems.html          (page poèmes, à remplir plus tard)
-├── definitions.html    (page mots inventés, à remplir plus tard)
-├── images/
-│   ├── book.jpg         ← à remplacer
-│   ├── portrait.jpg      ← à remplacer
-│   └── logo.jpg           ← à remplacer (la spirale)
-└── LISEZ-MOI.md         (ce fichier)
+├── poems.html          (page poèmes — vide pour l'instant, en noindex)
+├── definitions.html    (mots inventés, dont "huniverse" — vide pour l'instant, en noindex)
+├── images/              (les 3 images du site, ne pas renommer sans me le dire)
+├── CNAME                (contient le nom de domaine, ne pas toucher)
+├── robots.txt            (autorise Google à tout explorer)
+├── sitemap.xml            (liste des pages à indexer)
+├── llms.txt                (fiche d'identité pour les IA type ChatGPT/Claude)
+└── LISEZ-MOI.md              (ce fichier)
 ```
 
-## Comment remplacer les images
+Les anciennes versions du site (brouillons FR, ancienne version noire) sont rangées à part,
+hors de ce dossier, dans `~/Documents/site-brouillons-anciens/` — elles ne sont pas en ligne.
 
-1. Trouve tes fichiers d'origine (la couverture en haute résolution, ta photo, la spirale).
-2. Renomme-les exactement `book.jpg`, `portrait.jpg` et `logo.jpg` (respecte les minuscules).
-3. Dépose-les dans le dossier `images/`, à la place des fichiers actuels. Dis oui si ton ordinateur te demande de remplacer les fichiers existants.
-4. Ouvre `index.html` dans ton navigateur (double-clic) pour vérifier que tout s'affiche bien.
+## Comment publier un changement
 
-**Le dossier `images/` doit toujours rester à côté des fichiers `.html`, avec ces noms exacts.** Si tu changes un nom de fichier, il faut aussi le changer dans le code — dis-le-moi, je m'en occupe.
+Une fois qu'un fichier est modifié (par moi, ou par toi directement) :
 
-## Taille et qualité conseillées
+```bash
+cd ~/Documents/site
+git add -A
+git commit -m "description du changement"
+git push
+```
 
-| Image | Utilisée pour | Taille conseillée | Poids max conseillé |
-|---|---|---|---|
-| `book.jpg` | couverture, page Livre | au moins 1200 px de large (idéal 1600–2000 px), format vertical (environ 2:3) | 400 Ko |
-| `portrait.jpg` | fond de la section À propos | au moins 1600 px de large | 500 Ko |
-| `logo.jpg` | la spirale, en fond des essais et du podcast | au moins 1200 x 1200 px, fond blanc ou transparent | 400 Ko |
+Le site se met à jour tout seul en ligne, en 1 à 2 minutes. Dis-le-moi et je m'en charge.
 
-Les fichiers actuels sont trop petits pour un site définitif (la couverture ne fait que 390 px de large), c'est pourquoi je te les fais remplacer. Une fois tes photos en place, dis-le-moi : je vérifierai leur poids et je les compresserai si besoin, sans perdre en qualité visible.
+## Remplacer une image
 
-## Et ensuite ?
+Même nom de fichier exactement, déposée dans `images/`, puis publier (voir ci-dessus).
 
-Une fois les images en place, ce dossier est prêt à être déposé sur GitHub pour la mise en ligne (GitHub Pages). On fera cette étape ensemble quand tu seras prête.
+## Quand tu rempliras poems.html ou definitions.html
+
+Deux choses à faire dans le fichier concerné :
+1. Retire la ligne `<meta name="robots" content="noindex, follow">` dans le `<head>`.
+2. Ajoute la page dans `sitemap.xml` (copie le bloc `<url>...</url>` de essays.html).
+
+Dis-le-moi, je peux le faire pour toi.
