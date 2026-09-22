@@ -114,8 +114,9 @@
   /* Poemes : groupes + encarts blancs, un poeme par encart */
   .poems-group { margin-top: 64px; }
   .poems-group .label { text-align: center; }
+  .poem-cards { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 32px; }
   .poem-card {
-    background: #fff; width: fit-content; max-width: calc(100% - 48px); margin: 0 auto 32px;
+    background: #fff; width: fit-content; max-width: calc(100% - 48px); margin: 0;
     padding: 48px 52px; text-align: left;
   }
   .poem-card .ptitle { font-style: normal; font-size: 17px; color: var(--ink); margin-bottom: 28px; }
