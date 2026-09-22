@@ -8,7 +8,10 @@
     <loc>https://mathildedeluca.com/essays.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mathildedeluca.com/definitions.html</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
-<!-- poems.html et definitions.html sont volontairement absentes : elles portent encore la balise
-     noindex tant qu'elles sont vides. Le jour où tu les remplis, retire le noindex dans leur <head>
-     ET ajoute-les ici, avec le même format que les deux entrées ci-dessus. -->
+<!-- poems.html est volontairement absente : elle porte encore la balise noindex tant qu'elle est vide.
+     Le jour où tu la remplis, retire le noindex dans son <head> ET ajoute-la ici, même format que ci-dessus. -->
