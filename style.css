@@ -141,7 +141,7 @@
   .def-text-block { background: #0a0a0a; color: #f2ece4; padding: 32px 28px; }
   .def-text-block h2 { color: #f2ece4; }
   .def-text-block .ipa { color: #a89e92; }
-  .def-text-block .by { color: #a89e92; font-size: 11px; margin-top: 24px; margin-bottom: 0; }
+  .def-text-block .by { color: #a89e92; font-size: 12px; font-style: italic; text-transform: none; letter-spacing: 0; text-align: right; margin-top: 24px; margin-bottom: 0; }
   .def-text-block p { color: #f2ece4; }
   .def-text-block em { font-style: italic; }
   .def-text-block p + p { margin-top: 1.2em; }
