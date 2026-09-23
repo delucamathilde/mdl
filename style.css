@@ -74,6 +74,9 @@
   .portrait { max-width: 400px; }
   .cover { max-width: 230px; box-shadow: 0 22px 44px rgba(0,0,0,.22); }
 
+  .substack-embed { max-width: 480px; margin: 32px auto 0; }
+  .substack-embed iframe { display: block; }
+
   /* Couverture de face, comme photographiée : ombre douce, pas de mouvement */
   .bookphoto { position: relative; width: 230px; margin: 44px auto 34px; line-height: 0; }
   .bookphoto img {
