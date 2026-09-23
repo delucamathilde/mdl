@@ -36,9 +36,9 @@
     font-size: 13px; letter-spacing: .24em; text-transform: uppercase;
   }
   nav a { text-decoration: none; color: var(--muted); transition: color .3s; }
-  .nav-home { display: inline-flex; align-self: center; opacity: .75; transition: opacity .3s; }
+  .nav-home { display: inline-flex; align-self: center; position: relative; top: 3px; opacity: .75; transition: opacity .3s; }
   .nav-home:hover, .nav-home:focus-visible { opacity: 1; }
-  .nav-home img { display: block; border-radius: 3px; }
+  .nav-home img { display: block; width: 16px; height: 16px; border-radius: 3px; }
   nav a:hover, nav a:focus-visible { color: var(--ink); outline: none; }
   nav .lang { color: var(--ink); }
   nav .lang a { color: var(--muted); }
