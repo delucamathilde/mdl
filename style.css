@@ -139,7 +139,7 @@
   .poem-card .pbody { font-size: 17px; line-height: 1.85; }
   .poem-card .pbody + .pbody { margin-top: 1.6em; }
   .poem-card .pcaption { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
-  .poem-card .pnote { font-style: italic; font-size: 13px; color: var(--muted); text-align: right; margin-top: 24px; }
+  .poem-card .pnote { font-style: italic; font-size: 17px; color: var(--muted); text-align: right; margin-top: 24px; }
 
   .quote-cards {
     columns: 2 240px; column-gap: 28px; margin-top: 40px;
