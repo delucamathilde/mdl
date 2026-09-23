@@ -74,9 +74,6 @@
   .portrait { max-width: 400px; }
   .cover { max-width: 230px; box-shadow: 0 22px 44px rgba(0,0,0,.22); }
 
-  .substack-embed { max-width: 480px; margin: 32px auto 0; }
-  .substack-embed iframe { display: block; }
-
   /* Couverture de face, comme photographiée : ombre douce, pas de mouvement */
   .bookphoto { position: relative; width: 230px; margin: 44px auto 34px; line-height: 0; }
   .bookphoto img {
@@ -166,6 +163,8 @@
   .btn.solid:hover, .btn.solid:focus-visible { background: transparent; color: var(--ink); }
   .textlink { font-size: 13px; letter-spacing: .18em; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
   .textlink:hover { color: var(--ink); }
+  .inline-link { font-size: inherit; letter-spacing: 0; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+  .inline-link:hover { color: var(--ink); }
 
   /* Newsletter : logo figé en fond */
   /* pleine largeur, pour que la spirale qui tourne soit rognée aux bords de l'écran */
