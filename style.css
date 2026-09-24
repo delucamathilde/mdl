@@ -311,3 +311,17 @@
     h2.big { font-size: 2rem; }
     .sub h1 { font-size: 2rem; }
   }
+
+  /* Remonter en haut */
+  .to-top {
+    position: fixed; right: 18px; bottom: 18px; width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--ink); color: var(--paper); border-radius: 50%;
+    opacity: 0; visibility: hidden; transform: translateY(8px);
+    transition: opacity .3s, transform .3s, visibility .3s;
+    z-index: 40; text-decoration: none;
+  }
+  .to-top.show { opacity: .85; visibility: visible; transform: none; }
+  .to-top:hover, .to-top:focus-visible { opacity: 1; outline: none; }
+  .to-top svg { width: 16px; height: 16px; display: block; }
+  @media (prefers-reduced-motion: reduce) { .to-top { transition: opacity .3s, visibility .3s; } }

@@ -120,9 +120,25 @@
   </div>
   <p>© <span id="y">2026</span> Mathilde De Luca. All rights reserved.</p>
 </footer>
+<a href="#" class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+  // Bouton remonter en haut
+  (function () {
+    var btn = document.getElementById('toTop');
+    if (!btn) return;
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('show', window.scrollY > 500);
+    });
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
   // Menu déroulant
   (function () {
     const b = document.querySelector('.menu-btn'), m = document.getElementById('menu');
