@@ -51,6 +51,8 @@
     padding: 96px 24px 48px; position: relative;
   }
   .eyebrow { font-size: 12px; letter-spacing: .4em; text-transform: uppercase; color: var(--muted); margin-bottom: 40px; }
+  .eyebrow-founder { display: block; font-size: 12px; letter-spacing: .4em; text-transform: uppercase; color: #bf1521; text-decoration: none; margin-top: -24px; margin-bottom: 40px; }
+  .eyebrow-founder:hover, .eyebrow-founder:focus-visible { border-bottom: 1px solid rgba(191,21,33,.5); outline: none; }
   .ma-card { position: relative; display: block; max-width: 460px; margin: 44px auto 0; padding: 30px 28px 26px; background: #fed9e0; color: #bf1521; border-radius: 18px; text-align: center; text-decoration: none; transition: transform .35s ease, box-shadow .35s ease; }
   .ma-card:hover, .ma-card:focus-within { transform: scale(1.035); box-shadow: 0 16px 34px rgba(191,21,33,.2); outline: none; }
   .ma-card .ma-kicker { display: block; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 10px; }
