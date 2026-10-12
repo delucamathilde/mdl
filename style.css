@@ -40,8 +40,8 @@
   .nav-home:hover, .nav-home:focus-visible { opacity: 1; }
   .nav-home svg { display: block; }
   nav a:hover, nav a:focus-visible { color: var(--ink); outline: none; }
-  nav a.nav-ma { color: #bf1521; background: #fed9e0; padding: 3px 12px; border-radius: 999px; }
-  nav a.nav-ma:hover, nav a.nav-ma:focus-visible { color: #9e0603; background: #fea4ca; }
+  nav a.nav-ma { color: #bf1521; border: 1px solid #bf1521; border-radius: 0; padding: 4px 12px; background: transparent; transition: background .25s, color .25s; }
+  nav a.nav-ma:hover, nav a.nav-ma:focus-visible { color: #9e0603; background: #fed9e0; }
   nav .lang { color: var(--ink); }
   nav .lang a { color: var(--muted); }
   nav .lang b { font-weight: 500; }
