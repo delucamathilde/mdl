@@ -324,6 +324,7 @@
     body { font-size: 19px; }
     section { padding: 72px 0; }
     nav { gap: 6px 14px; font-size: 12px; letter-spacing: .12em; padding: 14px 10px; }
+    .eyebrow, .eyebrow-founder { font-size: 11px; letter-spacing: .16em; }
     .rows li { grid-template-columns: 1fr; gap: 4px; }
     h2.big { font-size: 2rem; }
     .sub h1 { font-size: 2rem; }
