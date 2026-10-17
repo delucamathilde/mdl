@@ -98,9 +98,9 @@
   .ma .intro-line { font-size:21px; line-height:1.5; margin:0 0 14px; }
   .ma .we { display:grid; grid-template-columns:repeat(2,1fr); gap:30px 40px; margin-top:46px; }
   .ma .we h3 { font-family:"Yanone Kaffeesatz", Impact, sans-serif; font-weight:600; font-size:clamp(1.3rem,5.4vw,1.9rem); line-height:1; letter-spacing:.03em; text-transform:uppercase; margin:0 0 2px; color:var(--red); }
-  .ma .we p { font-size:18px; line-height:1.5; margin:0; }
+  .ma .we p { font-size:20px; line-height:1.7; margin:0; }
   .ma .awaken { color:var(--red); font-family:"DM Serif Display", Georgia, serif; font-style:italic; font-size:clamp(1.2rem,3.6vw,1.6rem); line-height:1.2; margin:40px 0 0; }
-  .ma .body p { font-size:19px; line-height:1.65; margin:0 0 20px; }
+  .ma .body p { font-size:20px; line-height:1.7; margin:0 0 20px; }
   .ma .freq { display:grid; grid-template-columns:1fr 1fr; gap:0 52px; margin-top:44px; }
   .ma .freq article { padding:28px 0 0; }
   @media (max-width:640px){ .ma .freq { grid-template-columns:1fr; margin-top:20px; } .ma .freq article { padding-top:0; } .ma .freq article + article { margin-top:20px; } }
@@ -137,15 +137,15 @@
   .ma section.experiences { padding-bottom:28px; }
   .ma .quotes blockquote { margin:0 0 24px; }
   .ma .quotes blockquote:last-child { margin-bottom:0; }
-  .ma .quotes blockquote p { font-size:17px; line-height:1.5; font-style:italic; margin:0; }
+  .ma .quotes blockquote p { font-size:19px; line-height:1.65; font-style:italic; margin:0; }
   @media (min-width:760px){ .ma .quotes .qgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:0 22px; } .ma .quotes blockquote { margin:0; } }
-  .ma .quotes cite { display:inline; margin-left:3px; font-style:normal; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); white-space:nowrap; }
+  .ma .quotes cite { display:inline; margin-left:3px; font-style:normal; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--red); white-space:nowrap; }
   .ma .mbtn { display:inline-block; padding:15px 32px; border:1px solid currentColor; text-decoration:none; text-transform:uppercase; letter-spacing:.24em; font-size:13px; border-radius:999px; transition:background .25s,color .25s; }
   .ma .join { background:#FCF8F4; text-align:center; }
   .ma .join .in { max-width:640px; }
   .ma .join h2, .ma .join p, .ma .join .links a { color:var(--red); }
-  .ma .join p { font-size:19px; line-height:1.65; margin:0 0 28px; }
-  .ma .join .reach { font-size:18px; line-height:1.55; margin:34px 0 0; }
+  .ma .join p { font-size:20px; line-height:1.7; margin:0 0 28px; }
+  .ma .join .reach { font-size:20px; line-height:1.7; margin:34px 0 0; }
   .ma .join .reach.follow { margin-top:14px; }
   .ma .join .reach a { color:var(--red); text-decoration:underline; text-underline-offset:3px; }
   .ma .join .links { margin-top:22px; font-size:15px; }
@@ -162,14 +162,15 @@
   .ma .ev:focus-visible { outline:2px solid #111; outline-offset:4px; }
   .ma .ev-card { flex:0 0 min(78vw,290px); scroll-snap-align:start; background:var(--pale); border:1px solid rgba(191,21,33,.35); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
   .ma .ev-body { padding:26px 22px 24px; display:flex; flex-direction:column; gap:12px; flex:1; }
-  .ma .ev-tag { font-size:11px; letter-spacing:.3em; text-transform:uppercase; margin:0; color:var(--deep); }
+  .ma .ev-tag { font-size:12px; letter-spacing:.3em; text-transform:uppercase; margin:0; color:var(--deep); }
   .ma .ev-card h3 { font-family:"Yanone Kaffeesatz", Impact, sans-serif; font-weight:600; font-size:clamp(1.7rem,6.5vw,2.1rem); line-height:1; letter-spacing:.03em; text-transform:uppercase; margin:0; color:var(--red); }
-  .ma .ev-desc { font-size:17px; line-height:1.5; margin:0; }
+  .ma .ev-desc { font-size:17px; line-height:1.55; margin:0; }
   .ma .ev-ctrl { display:flex; align-items:center; justify-content:flex-end; gap:10px; margin-top:8px; }
   .ma .ev-nav { width:42px; height:42px; border-radius:50%; border:1px solid #6b625a; background:transparent; color:#6b625a; font-size:20px; line-height:1; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; transition:background .2s,color .2s,opacity .2s; }
   .ma .ev-nav:hover:not(:disabled) { background:#6b625a; color:#FCF8F4; }
   .ma .ev-nav:disabled { opacity:.25; cursor:default; }
   @media (prefers-reduced-motion: reduce){ .ma .ev { scroll-behavior:auto; } }
+  @media (max-width:520px){ .ma .we p, .ma .body p, .ma .join p, .ma .join .reach { font-size:19px; } }
 </style>
 </head>
 
